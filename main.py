@@ -4,10 +4,10 @@ import cv2
 app = Flask(__name__)
 
 # VideoCapture可以读取从url、本地视频文件以及本地摄像头的数据
-camera = cv2.VideoCapture('rtsp://admin:admin@172.30.78.88:8554/cam/realmonitor?channel=1&subtype=1')
+# camera = cv2.VideoCapture('rtsp://admin:admin@172.30.78.88:8554/cam/realmonitor?channel=1&subtype=1')
 # camera = cv2.VideoCapture('test.mp4')
 # 0代表的是第一个本地摄像头，如果有多个的话，依次类推
-# camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0)
 
 def gen_frames():
     while True:
